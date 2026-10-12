@@ -55,3 +55,18 @@
 .card-tada { background: #e3ecfc; }
 .card-adapdf { background: #fbe5e3; }
 .card-geomada { background: #e2f1e7; }
+
+/* Repères provisoires pour les nouvelles applications. */
+.card-ordi-academie, .app-page-ordi-academie { background: #eee8f7; }
+.card-clavier, .app-page-clavier { background: #fbefd9; }
+.app-monogram {
+    display: inline-grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+    border-radius: 13px;
+    background: #ffffffb3;
+    font-size: 24px;
+    font-weight: 800;
+}
