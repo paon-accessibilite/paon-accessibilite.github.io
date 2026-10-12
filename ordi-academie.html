@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ordi Académie — PAON</title>
-        <meta name="description" content="Ordi Académie : une application à découvrir sur PAON.">
+        <meta name="description" content="Un ordinateur simulé et 45 missions pour apprendre les gestes de base de l’informatique.">
         <link rel="icon" href="favicon.svg" type="image/svg+xml">
-        <link rel="stylesheet" href="styles.css?v=20261012-3">
+        <link rel="stylesheet" href="styles.css?v=20261012-4">
         <script defer src="script.js"></script>
+        <script defer src="downloads.js?v=20261012-4"></script>
     </head>
     <body class="app-page app-page-ordi-academie">
         <a class="skip" href="#contenu">Aller au contenu</a>
@@ -32,19 +33,53 @@
             <div class="detail-head">
                 <p class="eyebrow">Les applications PAON</p>
                 <h1 tabindex="-1" class="app-title">
-                    <span class="app-monogram" aria-hidden="true">OA</span>
+                    <img src="assets/logo-ordi-academie.png" alt="" width="64" height="64">
                     <span class="app-name">Ordi Académie</span>
                 </h1>
-                <p class="intro">La présentation de Ordi Académie sera bientôt disponible ici.</p>
+                <p class="intro">Un ordinateur simulé et 45 missions pour apprendre les gestes de base de l’informatique, à son rythme.</p>
             </div>
             <div class="detail-grid">
-                <section aria-labelledby="presentation">
-                    <h2 id="presentation">Présentation</h2>
-                    <p>Les fonctionnalités et les captures de l’application seront ajoutées prochainement.</p>
+                <section aria-labelledby="apercu">
+                    <h2 id="apercu">Aperçu de l’application</h2>
+                    <figure class="app-preview">
+                        <a href="assets/capture-ordi-academie.jpg" aria-label="Voir la capture d’Ordi Académie en grand">
+                            <img src="assets/capture-ordi-academie.jpg" alt="Une mission d’écriture dans TAda virtuel, avec le parcours et le bureau d’entraînement d’Ordi Académie." width="1280" height="720" loading="lazy">
+                        </a>
+                        <figcaption>Cliquer sur la capture pour l’ouvrir en grand.</figcaption>
+                    </figure>
+                    <h2>Apprendre en pratiquant</h2>
+                    <p>Les missions abordent la souris, les fichiers et dossiers, les chemins, les fenêtres, le copier/couper/coller, l’écriture dans des documents TAda virtuels, le clavier et les raccourcis.</p>
+                    <p>Dix badges accompagnent les progrès. Chaque élève dispose d’un profil avec son bureau et ses brouillons, sauvegardés sur le poste.</p>
+                    <p>Les consignes peuvent être lues à voix haute avec les voix locales de Windows. Le mode plein écran facilite l’utilisation en classe.</p>
+                    <p>Tout se passe dans un ordinateur simulé : les exercices ne modifient aucun fichier réel du PC. Les profils restent locaux, sans mot de passe ni synchronisation serveur.</p>
                 </section>
-                <section aria-labelledby="acces">
-                    <h2 id="acces">Accéder à l’application</h2>
-                    <p>Les liens d’accès seront ajoutés prochainement.</p>
+                <section aria-labelledby="downloads" data-download-app="ordi-academie">
+                    <h2 id="downloads">Téléchargements</h2>
+                    <p>Pour Windows 10 ou 11, en 64 bits. L’installeur est en français et inclut WebView2 : l’installation et les exercices fonctionnent sans connexion Internet.</p>
+                    <p data-download-status role="status">Version Windows disponible ci-dessous.</p>
+                    <div data-current-release>
+                        <h3>Ordi Académie 0.1.0</h3>
+                        <ul class="versions">
+                            <li class="version">
+                                <div class="download-info">
+                                    <img class="platform-logo" src="assets/platform-windows.svg" alt="" width="36" height="36">
+                                    <div class="download-text">
+                                        <strong class="download-label">Windows · installateur · 208,7 Mio</strong>
+                                        <small class="asset-name">Ordi-Academie-0.1.0-windows-x64-setup.exe</small>
+                                    </div>
+                                </div>
+                                <a class="button" href="https://github.com/paon-accessibilite/ordi-academie/releases/download/v0.1.0/Ordi-Academie-0.1.0-windows-x64-setup.exe" aria-label="Télécharger Ordi Académie pour Windows">Télécharger</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <details data-release-history hidden>
+                        <summary>Versions précédentes</summary>
+                        <div data-previous-releases></div>
+                    </details>
+                    <p>Cette première version n’est pas signée : Windows peut afficher un avertissement à son lancement.</p>
+                    <p><a href="https://github.com/paon-accessibilite/ordi-academie/blob/main/INSTALLATION-WINDOWS.md">Guide d’installation et d’utilisation →</a></p>
+                    <p><a href="https://github.com/paon-accessibilite/ordi-academie/releases">Toutes les versions et les empreintes SHA256 →</a></p>
+                    <p><a href="https://github.com/paon-accessibilite/ordi-academie">Code source sur GitHub →</a></p>
                 </section>
             </div>
             <button class="top" data-top>Retour en haut ↑</button>

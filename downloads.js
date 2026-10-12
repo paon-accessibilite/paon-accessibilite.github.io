@@ -5,6 +5,10 @@ const applicationNames = {
     tada: /^tada[-_]/i,
     adapdf: /^adapdf[-_]/i,
     geomada: /^g[eé]omada[-_]/i,
+    'ordi-academie': /^ordi-academie[-_]/i,
+};
+const applicationRepositories = {
+    'ordi-academie': 'paon-accessibilite/ordi-academie',
 };
 
 function assetPlatform(filename) {
@@ -101,6 +105,9 @@ function renderRelease(release, assets, showAssetRelease = false) {
 }
 
 async function loadDownloads(section) {
+    const repository = applicationRepositories[section.dataset.downloadApp];
+    const releasesUrl = repository ? `https://api.github.com/repos/${repository}/releases?per_page=100` : RELEASES_URL;
+    const releasesPage = repository ? `https://github.com/${repository}/releases` : RELEASES_PAGE;
     const status = section.querySelector('[data-download-status]');
     const current = section.querySelector('[data-current-release]');
     const history = section.querySelector('[data-release-history]');
@@ -108,7 +115,7 @@ async function loadDownloads(section) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 10000);
     try {
-        const response = await fetch(RELEASES_URL, { signal: controller.signal });
+        const response = await fetch(releasesUrl, { signal: controller.signal });
         if (!response.ok) throw new Error('Releases indisponibles');
         const releases = await response.json();
         const matcher = applicationNames[section.dataset.downloadApp];
@@ -117,14 +124,17 @@ async function loadDownloads(section) {
             .sort((a, b) => new Date(b.published_at) - new Date(a.published_at))
             .map(release => ({ release, assets: release.assets.filter(asset =>
                 matcher.test(asset.name) && /\.(exe|msi|deb|appimage|apk|dmg|zip)$/i.test(asset.name) &&
-                asset.browser_download_url.startsWith(`${RELEASES_PAGE}/download/`)
+                asset.browser_download_url.startsWith(`${releasesPage}/download/`)
             ) }))
             .filter(item => item.assets.length > 0);
         if (!available.length) {
             status.textContent = 'Les fichiers de ce logiciel seront bientôt disponibles ici.';
             return;
         }
-        status.textContent = 'Choisissez le fichier adapté à votre système. La version portable Windows s’utilise sans installation.';
+        status.textContent = 'Choisissez le fichier adapté à votre système.';
+        if (available.some(item => item.assets.some(asset => assetPlatform(asset.name) === 'windows' && /portable/i.test(asset.name)))) {
+            status.textContent += ' La version portable Windows s’utilise sans installation.';
+        }
         // Chaque plateforme peut avoir son propre numéro de version.
         // Garder le dernier fichier de chaque format disponible au premier plan.
         const seenFormats = new Set();
