@@ -58,7 +58,7 @@
 
 /* Repères provisoires pour les nouvelles applications. */
 .card-ordi-academie, .app-page-ordi-academie { background: #e2f1e7; }
-.card-clavier, .app-page-clavier { background: #fbefd9; }
+.card-clavier, .app-page-clavier { background: #e6eff8; }
 .app-monogram {
     display: inline-grid;
     place-items: center;
@@ -69,4 +69,53 @@
     background: #ffffffb3;
     font-size: 24px;
     font-weight: 800;
+}
+
+/* Menu principal compact, commun à toutes les pages. */
+.site-menu { position: relative; margin-left: auto; }
+.menu-toggle {
+    width: 46px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #ffffffb8;
+    color: var(--ink);
+    cursor: pointer;
+}
+.menu-toggle:hover { background: white; }
+.menu-icon { display: grid; gap: 5px; width: 22px; }
+.menu-icon span { display: block; height: 2px; border-radius: 2px; background: currentColor; }
+.site-menu-panel {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 230px;
+    display: grid;
+    gap: 3px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 14px 35px #183f3a24;
+}
+.site-menu-panel[hidden] { display: none; }
+.site-menu-panel a { padding: 8px 12px; border-radius: 7px; }
+.site-menu-panel a:hover { background: #f1f4ef; }
+.site-menu-panel a[aria-current] { background: #e8eee7; text-decoration: none; }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+@media(max-width:750px) {
+    .nav { flex-direction: row; align-items: center; }
 }

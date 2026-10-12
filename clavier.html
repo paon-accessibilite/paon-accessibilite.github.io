@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Clavier — PAON</title>
-        <meta name="description" content="Clavier : une application à découvrir sur PAON.">
+        <meta name="description" content="Une application de dactylographie progressive, en français et hors ligne.">
         <link rel="icon" href="favicon.svg" type="image/svg+xml">
-        <link rel="stylesheet" href="styles.css?v=20261012-3">
+        <link rel="stylesheet" href="styles.css?v=20261012-5">
         <script defer src="script.js"></script>
+        <script defer src="downloads.js?v=20261012-5"></script>
     </head>
     <body class="app-page app-page-clavier">
         <a class="skip" href="#contenu">Aller au contenu</a>
@@ -17,14 +18,20 @@
                     <img src="assets/plume.svg" alt="" width="32" height="50">
                     PAON
                 </a>
-                <nav aria-label="Navigation principale">
-                    <a href="index.html">Accueil</a>
-                    <a href="tada.html">TAda</a>
-                    <a href="adapdf.html">adaPDF</a>
-                    <a href="geomada.html">GéomADA</a>
-                    <a href="ordi-academie.html">Ordi Académie</a>
-                    <a href="clavier.html" aria-current="page">Clavier</a>
-                </nav>
+                <div class="site-menu" data-menu>
+                    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-panel" data-menu-toggle>
+                        <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                        <span class="visually-hidden" data-menu-label>Ouvrir le menu</span>
+                    </button>
+                    <nav id="site-menu-panel" class="site-menu-panel" aria-label="Navigation principale" data-menu-panel hidden>
+                        <a href="index.html">Accueil</a>
+                        <a href="tada.html">TAda</a>
+                        <a href="adapdf.html">adaPDF</a>
+                        <a href="geomada.html">GéomADA</a>
+                        <a href="ordi-academie.html">Ordi Académie</a>
+                        <a href="clavier.html" aria-current="page">Clavier</a>
+                    </nav>
+                </div>
             </div>
         </header>
         <main id="contenu" class="wrap detail">
@@ -32,19 +39,37 @@
             <div class="detail-head">
                 <p class="eyebrow">Les applications PAON</p>
                 <h1 tabindex="-1" class="app-title">
-                    <span class="app-monogram" aria-hidden="true">C</span>
+                    <img src="assets/logo-clavier.svg" alt="" width="64" height="64">
                     <span class="app-name">Clavier</span>
                 </h1>
-                <p class="intro">La présentation de Clavier sera bientôt disponible ici.</p>
+                <p class="intro">Une application de dactylographie progressive, en français et hors ligne, pour apprendre à utiliser son clavier à son rythme.</p>
             </div>
             <div class="detail-grid">
-                <section aria-labelledby="presentation">
-                    <h2 id="presentation">Présentation</h2>
-                    <p>Les fonctionnalités et les captures de l’application seront ajoutées prochainement.</p>
+                <section aria-labelledby="apercu">
+                    <h2 id="apercu">Aperçu de l’application</h2>
+                    <figure class="app-preview">
+                        <a href="assets/capture-clavier.png" aria-label="Voir la capture de Clavier en grand">
+                            <img src="assets/capture-clavier.png" alt="Exercice de dactylographie dans Clavier avec le texte à saisir, le clavier AZERTY coloré et le guidage des doigts." width="1280" height="680" loading="lazy">
+                        </a>
+                        <figcaption>Cliquer sur la capture pour l’ouvrir en grand.</figcaption>
+                    </figure>
+                    <h2>Apprendre progressivement</h2>
+                    <p>Clavier propose 92 leçons : touches de repos, lettres, majuscules, accents, ponctuation, AltGr, pavé numérique et textes.</p>
+                    <p>Le clavier AZERTY est coloré par doigt et indique la prochaine touche attendue. La vitesse, la précision, les hésitations et les erreurs sont suivies pour chaque profil.</p>
+                    <p>Les élèves retrouvent leur dernière leçon et leur tentative en cours. Une courbe présente les vingt dernières séances, avec export CSV possible.</p>
+                    <p>Deux mini-jeux utilisent uniquement les touches déjà travaillées. L’application fonctionne sans connexion Internet et les données restent enregistrées localement.</p>
                 </section>
-                <section aria-labelledby="acces">
-                    <h2 id="acces">Accéder à l’application</h2>
-                    <p>Les liens d’accès seront ajoutés prochainement.</p>
+                <section aria-labelledby="downloads" data-download-app="clavier">
+                    <h2 id="downloads">Téléchargements</h2>
+                    <p>Clavier 0.6.3 est disponible pour Windows 64 bits et Linux Mint 22.3 ou une distribution compatible.</p>
+                    <p data-download-status role="status">Les fichiers disponibles sont en cours de chargement.</p>
+                    <div data-current-release></div>
+                    <details data-release-history hidden>
+                        <summary>Versions précédentes</summary>
+                        <div data-previous-releases></div>
+                    </details>
+                    <p>La version portable Windows s’utilise après extraction de l’archive ZIP, sans installation.</p>
+                    <p><a href="https://github.com/frdefaye-blip/paon/releases">Toutes les versions et les empreintes SHA256 →</a></p>
                 </section>
             </div>
             <button class="top" data-top>Retour en haut ↑</button>

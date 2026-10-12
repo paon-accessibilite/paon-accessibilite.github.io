@@ -6,9 +6,9 @@
         <title>Ordi Académie — PAON</title>
         <meta name="description" content="Un ordinateur simulé et 45 missions pour apprendre les gestes de base de l’informatique.">
         <link rel="icon" href="favicon.svg" type="image/svg+xml">
-        <link rel="stylesheet" href="styles.css?v=20261012-4">
+        <link rel="stylesheet" href="styles.css?v=20261012-5">
         <script defer src="script.js"></script>
-        <script defer src="downloads.js?v=20261012-4"></script>
+        <script defer src="downloads.js?v=20261012-5"></script>
     </head>
     <body class="app-page app-page-ordi-academie">
         <a class="skip" href="#contenu">Aller au contenu</a>
@@ -18,14 +18,20 @@
                     <img src="assets/plume.svg" alt="" width="32" height="50">
                     PAON
                 </a>
-                <nav aria-label="Navigation principale">
-                    <a href="index.html">Accueil</a>
-                    <a href="tada.html">TAda</a>
-                    <a href="adapdf.html">adaPDF</a>
-                    <a href="geomada.html">GéomADA</a>
-                    <a href="ordi-academie.html" aria-current="page">Ordi Académie</a>
-                    <a href="clavier.html">Clavier</a>
-                </nav>
+                <div class="site-menu" data-menu>
+                    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-panel" data-menu-toggle>
+                        <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                        <span class="visually-hidden" data-menu-label>Ouvrir le menu</span>
+                    </button>
+                    <nav id="site-menu-panel" class="site-menu-panel" aria-label="Navigation principale" data-menu-panel hidden>
+                        <a href="index.html">Accueil</a>
+                        <a href="tada.html">TAda</a>
+                        <a href="adapdf.html">adaPDF</a>
+                        <a href="geomada.html">GéomADA</a>
+                        <a href="ordi-academie.html" aria-current="page">Ordi Académie</a>
+                        <a href="clavier.html">Clavier</a>
+                    </nav>
+                </div>
             </div>
         </header>
         <main id="contenu" class="wrap detail">

@@ -6,6 +6,7 @@ const applicationNames = {
     adapdf: /^adapdf[-_]/i,
     geomada: /^g[eé]omada[-_]/i,
     'ordi-academie': /^ordi-academie[-_]/i,
+    clavier: /^clavier[-_]/i,
 };
 const applicationRepositories = {
     'ordi-academie': 'paon-accessibilite/ordi-academie',
@@ -14,16 +15,24 @@ const applicationRepositories = {
 function assetPlatform(filename) {
     const name = filename.toLowerCase();
     if (/\.(exe|msi)$/.test(name)) return 'windows';
+    if (name.endsWith('.zip') && name.includes('windows')) return 'windows';
     if (name.endsWith('.apk')) return 'android';
     if (/\.(deb|appimage)$/.test(name)) return 'linux';
     return null;
+}
+
+function assetIsPortable(filename) {
+    const name = filename.toLowerCase();
+    return name.includes('portable') || (name.endsWith('.zip') && name.includes('windows'));
 }
 
 function assetDescription(asset) {
     const name = asset.name.toLowerCase();
     let platform = 'Fichier';
     if (/\.(exe|msi)$/.test(name)) {
-        platform = name.includes('portable') ? 'Windows · version portable' : 'Windows · installateur';
+        platform = assetIsPortable(name) ? 'Windows · version portable' : 'Windows · installateur';
+    } else if (name.endsWith('.zip') && name.includes('windows')) {
+        platform = 'Windows · version portable';
     } else if (name.endsWith('.deb')) {
         platform = 'Linux · paquet Debian / Ubuntu';
     } else if (name.endsWith('.appimage')) {
@@ -41,7 +50,7 @@ function assetDescription(asset) {
 
 function assetOrder(asset) {
     const platform = assetPlatform(asset.name);
-    if (platform === 'windows') return asset.name.toLowerCase().includes('portable') ? 1 : 0;
+    if (platform === 'windows') return assetIsPortable(asset.name) ? 1 : 0;
     if (platform === 'android') return 2;
     if (platform === 'linux') return 3;
     return 4;
@@ -146,7 +155,7 @@ async function loadDownloads(section) {
             for (const asset of item.assets) {
                 const name = asset.name.toLowerCase();
                 const extension = name.split('.').pop();
-                const format = `${assetPlatform(name) || 'archive'}-${extension}-${name.includes('portable') ? 'portable' : 'standard'}`;
+                const format = `${assetPlatform(name) || 'archive'}-${extension}-${assetIsPortable(name) ? 'portable' : 'standard'}`;
                 if (seenFormats.has(format)) {
                     olderAssets.push(asset);
                 } else {
