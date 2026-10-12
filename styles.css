@@ -103,7 +103,20 @@
     box-shadow: 0 14px 35px #183f3a24;
 }
 .site-menu-panel[hidden] { display: none; }
-.site-menu-panel a { padding: 8px 12px; border-radius: 7px; }
+.site-menu-panel a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 7px;
+}
+.menu-app-icon {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    object-fit: contain;
+}
 .site-menu-panel a:hover { background: #f1f4ef; }
 .site-menu-panel a[aria-current] { background: #e8eee7; text-decoration: none; }
 .visually-hidden {
