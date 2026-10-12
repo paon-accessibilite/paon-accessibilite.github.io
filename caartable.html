@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CAArtable — PAON</title>
+        <meta name="description" content="Une application gratuite de Communication Alternative et Améliorée pour les élèves non verbaux.">
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="styles.css?v=20261012-6">
+        <script defer src="script.js?v=20261012-1"></script>
+        <script defer src="downloads.js?v=20261012-6"></script>
+    </head>
+    <body class="app-page app-page-caartable">
+        <a class="skip" href="#contenu">Aller au contenu</a>
+        <header>
+            <div class="wrap nav">
+                <a class="brand" href="index.html">
+                    <img src="assets/plume.svg" alt="" width="32" height="50">
+                    PAON
+                </a>
+                <div class="site-menu" data-menu>
+                    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-panel" data-menu-toggle>
+                        <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                        <span class="visually-hidden" data-menu-label>Ouvrir le menu</span>
+                    </button>
+                    <nav id="site-menu-panel" class="site-menu-panel" aria-label="Navigation principale" data-menu-panel hidden>
+                        <a href="index.html">Accueil</a>
+                        <a href="tada.html">TAda</a>
+                        <a href="adapdf.html">adaPDF</a>
+                        <a href="geomada.html">GéomADA</a>
+                        <a href="ordi-academie.html">Ordi Académie</a>
+                        <a href="clavier.html">Clavier</a>
+                        <a href="caartable.html" aria-current="page">CAArtable</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main id="contenu" class="wrap detail">
+            <a class="breadcrumb" href="index.html#autres-applis">← Toutes les applications</a>
+            <div class="detail-head">
+                <p class="eyebrow">Les applications PAON</p>
+                <h1 tabindex="-1" class="app-title">
+                    <img src="assets/logo-caartable.png" alt="" width="64" height="64">
+                    <span class="app-name">CAArtable</span>
+                </h1>
+                <p class="intro">Une application gratuite de Communication Alternative et Améliorée pour permettre aux élèves non verbaux de s’exprimer plus facilement.</p>
+            </div>
+            <div class="detail-grid">
+                <section aria-labelledby="apercu">
+                    <h2 id="apercu">Aperçu de l’application</h2>
+                    <figure class="app-preview">
+                        <a href="assets/capture-caartable.png" aria-label="Voir la capture de CAArtable en grand">
+                            <img src="assets/capture-caartable.png" alt="Interface principale de CAArtable avec une grille de pictogrammes classés par couleurs et catégories." width="1401" height="700" loading="lazy">
+                        </a>
+                        <figcaption>Cliquer sur la capture pour l’ouvrir en grand.</figcaption>
+                    </figure>
+                    <h2>Communiquer avec des supports personnalisés</h2>
+                    <p>CAArtable propose des profils personnalisables afin d’adapter les contenus et l’organisation aux besoins de chaque élève.</p>
+                    <p>Deux voix sont disponibles pour oraliser les messages. L’application fonctionne hors ligne, sans dépendre d’une connexion Internet pendant son utilisation.</p>
+                    <p>CAArtable est disponible pour Windows, les tablettes Android et les téléphones Android.</p>
+                </section>
+                <section aria-labelledby="downloads" data-download-app="caartable">
+                    <h2 id="downloads">Téléchargements</h2>
+                    <p>Retrouvez ici les versions Windows, Android tablette et Android téléphone.</p>
+                    <p data-download-status role="status">Les fichiers disponibles sont en cours de chargement.</p>
+                    <div data-current-release></div>
+                    <details data-release-history hidden>
+                        <summary>Versions précédentes</summary>
+                        <div data-previous-releases></div>
+                    </details>
+                    <p><a href="https://github.com/paon-accessibilite/caartable/releases">Toutes les versions sur GitHub →</a></p>
+                    <p><a href="https://github.com/paon-accessibilite/caartable">Code source sur GitHub →</a></p>
+                    <noscript>
+                        <p>Pour consulter les fichiers disponibles sans JavaScript, utilisez le lien vers les versions sur GitHub.</p>
+                    </noscript>
+                </section>
+            </div>
+            <button class="top" data-top>Retour en haut ↑</button>
+        </main>
+        <footer>
+            <div class="wrap footer">
+                <span>PAON · Pédagogie Accessible, Outils Numériques</span>
+                <a href="mailto:francois.defaye@ac-limoges.fr">Contact</a>
+            </div>
+        </footer>
+    </body>
+</html>

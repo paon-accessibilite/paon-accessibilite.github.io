@@ -7,9 +7,11 @@ const applicationNames = {
     geomada: /^g[eé]omada[-_]/i,
     'ordi-academie': /^ordi-academie[-_]/i,
     clavier: /^clavier[-_]/i,
+    caartable: /^caartable[-_]/i,
 };
 const applicationRepositories = {
     'ordi-academie': 'paon-accessibilite/ordi-academie',
+    caartable: 'paon-accessibilite/caartable',
 };
 
 function assetPlatform(filename) {
@@ -26,6 +28,13 @@ function assetIsPortable(filename) {
     return name.includes('portable') || (name.endsWith('.zip') && name.includes('windows'));
 }
 
+function assetVariant(filename) {
+    const name = filename.toLowerCase();
+    if (name.includes('tablette') || name.includes('tablet')) return 'tablette';
+    if (name.includes('telephone') || name.includes('téléphone') || name.includes('phone')) return 'telephone';
+    return 'standard';
+}
+
 function assetDescription(asset) {
     const name = asset.name.toLowerCase();
     let platform = 'Fichier';
@@ -38,7 +47,13 @@ function assetDescription(asset) {
     } else if (name.endsWith('.appimage')) {
         platform = 'Linux · AppImage';
     } else if (name.endsWith('.apk')) {
-        platform = name.includes('debug') ? 'Android · APK de test' : 'Android · APK';
+        if (name.includes('tablette') || name.includes('tablet')) {
+            platform = 'Android · tablette · APK';
+        } else if (name.includes('telephone') || name.includes('téléphone') || name.includes('phone')) {
+            platform = 'Android · téléphone · APK';
+        } else {
+            platform = name.includes('debug') ? 'Android · APK de test' : 'Android · APK';
+        }
     } else if (name.endsWith('.dmg')) {
         platform = 'macOS · image disque';
     } else if (name.endsWith('.zip')) {
@@ -155,7 +170,7 @@ async function loadDownloads(section) {
             for (const asset of item.assets) {
                 const name = asset.name.toLowerCase();
                 const extension = name.split('.').pop();
-                const format = `${assetPlatform(name) || 'archive'}-${extension}-${assetIsPortable(name) ? 'portable' : 'standard'}`;
+                const format = `${assetPlatform(name) || 'archive'}-${extension}-${assetIsPortable(name) ? 'portable' : 'standard'}-${assetVariant(name)}`;
                 if (seenFormats.has(format)) {
                     olderAssets.push(asset);
                 } else {
