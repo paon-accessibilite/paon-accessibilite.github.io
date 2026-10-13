@@ -8,6 +8,7 @@ const applicationNames = {
     'ordi-academie': /^ordi-academie[-_]/i,
     clavier: /^clavier[-_]/i,
     caartable: /^caartable[-_]/i,
+    classeur: /^classeur[-_]/i,
 };
 const applicationRepositories = {
     'ordi-academie': 'paon-accessibilite/ordi-academie',

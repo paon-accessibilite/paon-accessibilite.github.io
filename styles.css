@@ -60,6 +60,7 @@
 .card-ordi-academie, .app-page-ordi-academie { background: #e2f1e7; }
 .card-clavier, .app-page-clavier { background: #e6eff8; }
 .card-caartable, .app-page-caartable { background: #def2f2; }
+.card-classeur, .app-page-classeur { background: #edf3ec; }
 .app-monogram {
     display: inline-grid;
     place-items: center;
