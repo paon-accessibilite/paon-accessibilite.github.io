@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fusion PDF — PAON</title>
+        <meta name="description" content="Un logiciel simple pour fusionner des PDF, déplacer / supprimer / faire pivoter des pages.">
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="styles.css?v=20261014-1">
+        <script defer src="script.js?v=20261012-1"></script>
+        <script defer src="downloads.js?v=20261014-1"></script>
+    </head>
+    <body class="app-page app-page-fusion-pdf">
+        <a class="skip" href="#contenu">Aller au contenu</a>
+        <header>
+            <div class="wrap nav">
+                <a class="brand" href="index.html">
+                    <img src="assets/plume.svg" alt="" width="32" height="50">
+                    PAON
+                </a>
+                <div class="site-menu" data-menu>
+                    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-panel" data-menu-toggle>
+                        <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                        <span class="visually-hidden" data-menu-label>Ouvrir le menu</span>
+                    </button>
+                    <nav id="site-menu-panel" class="site-menu-panel" aria-label="Navigation principale" data-menu-panel hidden>
+                        <a href="index.html">Accueil</a>
+                        <a href="tada.html"><img class="menu-app-icon" src="assets/logo-tada.svg" alt="" width="28" height="28">TAda</a>
+                        <a href="adapdf.html"><img class="menu-app-icon" src="assets/logo-adapdf.svg" alt="" width="28" height="28">adaPDF</a>
+                        <a href="geomada.html"><img class="menu-app-icon" src="assets/logo-geomada.svg" alt="" width="28" height="28">GéomADA</a>
+                        <a href="ordi-academie.html"><img class="menu-app-icon" src="assets/logo-ordi-academie.png" alt="" width="28" height="28">Ordi Académie</a>
+                        <a href="clavier.html"><img class="menu-app-icon" src="assets/logo-clavier.svg" alt="" width="28" height="28">Clavier</a>
+                        <a href="caartable.html"><img class="menu-app-icon" src="assets/logo-caartable.png" alt="" width="28" height="28">CAArtable</a>
+                        <a href="classeur.html"><img class="menu-app-icon" src="assets/logo-classeur.svg" alt="" width="28" height="28">Classeur</a>
+                        <a href="fusion-pdf.html" aria-current="page"><img class="menu-app-icon" src="assets/logo-fusion-pdf.svg" alt="" width="28" height="28">Fusion PDF</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main id="contenu" class="wrap detail">
+            <a class="breadcrumb" href="index.html#enseignants">← Toutes les applications</a>
+            <div class="detail-head">
+                <p class="eyebrow">Les applications PAON</p>
+                <h1 tabindex="-1" class="app-title">
+                    <img src="assets/logo-fusion-pdf.svg" alt="" width="64" height="64">
+                    <span class="app-name">Fusion PDF</span>
+                </h1>
+                <p class="intro">Un logiciel simple pour fusionner des PDF, déplacer / supprimer / faire pivoter des pages.</p>
+            </div>
+            <div class="detail-grid">
+                <section aria-labelledby="apercu">
+                    <h2 id="apercu">Aperçu de l’application</h2>
+                    <p>Ajoutez vos PDF, choisissez les pages à conserver et assemblez-les dans l’ordre souhaité.</p>
+                    <p>L’éditeur permet de déplacer, supprimer et faire pivoter les pages, puis d’enregistrer une copie du document.</p>
+                    <p>Tout le traitement s’effectue sur votre ordinateur, sans envoyer les documents sur Internet.</p>
+                </section>
+                <section aria-labelledby="downloads" data-download-app="fusion-pdf">
+                    <h2 id="downloads">Téléchargements</h2>
+                    <p>Windows · version portable. Extraire entièrement l’archive ZIP, puis lancer <code>FusionPDF-Editeur.exe</code> dans le dossier obtenu.</p>
+                    <p data-download-status role="status">Les fichiers disponibles sont en cours de chargement.</p>
+                    <div data-current-release></div>
+                    <details data-release-history hidden>
+                        <summary>Versions précédentes</summary>
+                        <div data-previous-releases></div>
+                    </details>
+                    <p><a href="https://github.com/paon-accessibilite/fusion-pdf/releases">Version et empreinte SHA256 sur GitHub →</a></p>
+                    <noscript><p>Pour télécharger sans JavaScript, utilisez le lien vers la version sur GitHub.</p></noscript>
+                </section>
+            </div>
+            <button class="top" data-top>Retour en haut ↑</button>
+        </main>
+        <footer>
+            <div class="wrap footer">
+                <span>PAON · Pédagogie Accessible, Outils Numériques</span>
+                <a href="mailto:francois.defaye@ac-limoges.fr">Contact</a>
+            </div>
+        </footer>
+    </body>
+</html>

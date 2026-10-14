@@ -9,10 +9,12 @@ const applicationNames = {
     clavier: /^clavier[-_]/i,
     caartable: /^caartable[-_]/i,
     classeur: /^classeur[-_]/i,
+    'fusion-pdf': /^fusionpdf[-_]/i,
 };
 const applicationRepositories = {
     'ordi-academie': 'paon-accessibilite/ordi-academie',
     caartable: 'paon-accessibilite/caartable',
+    'fusion-pdf': 'paon-accessibilite/fusion-pdf',
 };
 
 function assetPlatform(filename) {

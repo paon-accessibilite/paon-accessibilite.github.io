@@ -118,6 +118,8 @@
     flex: 0 0 28px;
     object-fit: contain;
 }
+.card-fusion-pdf, .app-page-fusion-pdf { background: #e6ecff; }
+.site-menu-panel { max-height: calc(100dvh - 120px); overflow-y: auto; }
 .site-menu-panel a:hover { background: #f1f4ef; }
 .site-menu-panel a[aria-current] { background: #e8eee7; text-decoration: none; }
 .visually-hidden {
