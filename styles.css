@@ -119,6 +119,12 @@
     object-fit: contain;
 }
 .card-fusion-pdf, .app-page-fusion-pdf { background: #e6ecff; }
+.card-linux-nird, .article-page { background: #e2f1e9; }
+.resource-article { max-width: 960px; }
+.resource-section { margin: 30px 0; padding: clamp(20px, 4vw, 40px); background: #ffffffc9; border: 1px solid var(--line); border-radius: 16px; }
+.resource-section p { max-width: 75ch; }
+.resource-section .app-preview { margin: 25px 0; }
+.resource-links { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
 .site-menu-panel { max-height: calc(100dvh - 120px); overflow-y: auto; }
 .site-menu-panel a:hover { background: #f1f4ef; }
 .site-menu-panel a[aria-current] { background: #e8eee7; text-decoration: none; }
