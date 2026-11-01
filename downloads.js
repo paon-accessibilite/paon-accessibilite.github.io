@@ -2,6 +2,7 @@
 const RELEASES_URL = 'https://api.github.com/repos/frdefaye-blip/paon/releases?per_page=100';
 const RELEASES_PAGE = 'https://github.com/frdefaye-blip/paon/releases';
 const applicationNames = {
+    mathgiciens: /^mathgiciens[-_]/i,
     tada: /^tada[-_]/i,
     adapdf: /^adapdf[-_]/i,
     geomada: /^g[eé]omada[-_]/i,

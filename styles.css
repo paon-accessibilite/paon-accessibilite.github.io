@@ -142,3 +142,5 @@
 @media(max-width:750px) {
     .nav { flex-direction: row; align-items: center; }
 }
+
+.card-mathgiciens, .app-page-mathgiciens { background: #eee5f7; }
