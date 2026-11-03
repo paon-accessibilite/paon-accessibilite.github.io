@@ -143,4 +143,5 @@
     .nav { flex-direction: row; align-items: center; }
 }
 
+/* Teinte provisoire pour le jeu Mathgiciens. */
 .card-mathgiciens, .app-page-mathgiciens { background: #eee5f7; }
