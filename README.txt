@@ -1,6 +1,6 @@
 PAON — maquette HTML / CSS / JavaScript
 Ouvrir index.html dans un navigateur. Aucun serveur ni installation nécessaire.
-Pages : index.html, tada.html, adapdf.html, geomada.html.
+Pages : index.html, tada.html, padaf.html, geomada.html.
 styles.css : apparence commune. script.js : retour en haut des fiches.
 Les descriptions sont provisoires. Aucun numéro de version ou système compatible n'est présumé.
 Pour ajouter un téléchargement, remplacer le statut À venir par :

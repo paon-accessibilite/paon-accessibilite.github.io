@@ -24,8 +24,8 @@
 .app-name { font-weight: 800; letter-spacing: -.5px; }
 .app-name-tada { color: #2f64e9; }
 .app-name-geomada { color: #187647; }
-.app-name-adapdf { display: inline-block; color: #fff; background: #183f3a; padding: .05em .3em; border-radius: .15em; }
-.app-name-adapdf .app-prefix { color: #7dd3c7; }
+.app-name-padaf { display: inline-block; color: #fff; background: #183f3a; padding: .05em .3em; border-radius: .15em; }
+.app-name-padaf .app-prefix { color: #7dd3c7; }
 .app-title { display: flex; align-items: center; gap: 18px; }
 .app-title img { width: 64px; height: 64px; flex: 0 0 64px; }
 .app-preview { margin: 0; }
@@ -42,7 +42,7 @@
 
 /* Un fond léger inspiré de l’icône de chaque logiciel. */
 .app-page-tada { --paper: #e3ecfc; --line: #d2dced; }
-.app-page-adapdf { --paper: #fbe5e3; --line: #ead7d5; }
+.app-page-padaf { --paper: #fbe5e3; --line: #ead7d5; }
 .app-page-geomada { --paper: #e2f1e7; --line: #d2e2d7; }
 .card { text-decoration: none; }
 .card .text-link { text-decoration: underline; }
@@ -53,7 +53,7 @@
 
 /* Les cartes reprennent le fond de la page de leur logiciel. */
 .card-tada { background: #e3ecfc; }
-.card-adapdf { background: #fbe5e3; }
+.card-padaf { background: #fbe5e3; }
 .card-geomada { background: #e2f1e7; }
 
 /* Repères provisoires pour les nouvelles applications. */

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PaDaF — PAON</title>
+        <meta name="description" content="Un lecteur éditeur de PDF pensé pour répondre aux besoins des élèves.">
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="styles.css?v=20261113-1">
+        <script defer src="script.js?v=20261012-1"></script>
+        <script defer src="downloads.js?v=20261113-1"></script>
+    </head>
+    <body class="app-page app-page-padaf">
+        <a class="skip" href="#contenu">Aller au contenu</a>
+        <header>
+            <div class="wrap nav">
+                <a class="brand" href="index.html">
+                    <img src="assets/plume.svg" alt="" width="32" height="50">
+                    PAON
+                </a>
+                <div class="site-menu" data-menu>
+                    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-panel" data-menu-toggle>
+                        <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                        <span class="visually-hidden" data-menu-label>Ouvrir le menu</span>
+                    </button>
+                    <nav id="site-menu-panel" class="site-menu-panel" aria-label="Navigation principale" data-menu-panel hidden>
+                        <a href="index.html">Accueil</a>
+                        <a href="tada.html"><img class="menu-app-icon" src="assets/logo-tada.svg" alt="" width="28" height="28">TAda</a>
+                        <a href="padaf.html" aria-current="page"><img class="menu-app-icon" src="assets/logo-padaf.svg" alt="" width="28" height="28">PaDaF</a>
+                        <a href="geomada.html"><img class="menu-app-icon" src="assets/logo-geomada.svg" alt="" width="28" height="28">GéomADA</a>
+                        <a href="ordi-academie.html"><img class="menu-app-icon" src="assets/logo-ordi-academie.png" alt="" width="28" height="28">Ordi Academie</a>
+                        <a href="clavier.html"><img class="menu-app-icon" src="assets/logo-clavier.svg" alt="" width="28" height="28">Clavier</a>
+                        <a href="caartable.html"><img class="menu-app-icon" src="assets/logo-caartable.png" alt="" width="28" height="28">CAArtable</a>
+                        <a href="classeur.html"><img class="menu-app-icon" src="assets/logo-classeur.svg" alt="" width="28" height="28">Classeur</a>
+                        <a href="adavocal.html">adaVocal</a>
+                        <a href="fusion-pdf.html"><img class="menu-app-icon" src="assets/logo-fusion-pdf.svg" alt="" width="28" height="28">Fusion PDF</a>
+                        <a href="linux-nird.html"><img class="menu-app-icon" src="assets/logo-linux-nird.svg" alt="" width="28" height="28">Installer Linux NIRD</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main id="contenu" class="wrap detail">
+            <a class="breadcrumb" href="index.html#logiciels">← Tous les logiciels</a>
+            <div class="detail-head">
+                <p class="eyebrow">Les logiciels PAON</p>
+                <h1 tabindex="-1" class="app-title">
+                    <img src="assets/logo-padaf.svg" alt="" width="64" height="64">
+                    <span class="app-name app-name-padaf"><span class="app-prefix">Pa</span>DaF</span>
+                </h1>
+                <p class="intro">Un lecteur éditeur de PDF pensé pour répondre aux besoins des élèves.</p>
+            </div>
+            <div class="detail-grid">
+                <section aria-labelledby="apercu">
+                    <h2 id="apercu">Aperçu du logiciel</h2>
+                    <figure class="app-preview">
+                        <a href="assets/capture-padaf.png" aria-label="Voir la capture de PaDaF en grand">
+                            <img width="1231" height="892" src="assets/capture-padaf.png" alt="Interface d’PaDaF avec une carte de l’Europe, du texte adapté et des légendes modifiables." loading="lazy">
+                        </a>
+                        <figcaption>Cliquer sur la capture pour l’ouvrir en grand.</figcaption>
+                    </figure>
+                </section>
+                <section aria-labelledby="downloads" data-download-app="padaf">
+                    <h2 id="downloads">Téléchargements</h2>
+                    <p data-download-status role="status">Les fichiers de ce logiciel seront bientôt disponibles ici.</p>
+                    <div data-current-release>
+                    </div>
+                    <details data-release-history hidden>
+                        <summary>Versions précédentes</summary>
+                        <div data-previous-releases>
+                        </div>
+                    </details>
+                    <p>
+                        <a href="https://github.com/frdefaye-blip/paon/releases/tag/padaf-v0.3.11">Voir PaDaF 0.3.11 sur GitHub →</a>
+                    </p>
+                    <noscript>
+                        <p>Pour consulter les fichiers disponibles sans JavaScript, utilisez le lien vers les versions sur GitHub.</p>
+                    </noscript>
+                </section>
+            </div>
+            <section aria-labelledby="nouveautes">
+                <h2 id="nouveautes">Nouveautés de la version 0.3.11</h2>
+                <ul>
+                    <li>Le logiciel prend le nom PaDaF. Vos projets <code>.adapdf</code> restent compatibles.</li>
+                    <li>Une notice rapide intégrée sur Windows, Linux et Android.</li>
+                    <li>Les liens PAON s’ouvrent dans le navigateur de la machine.</li>
+                    <li>Des outils regroupés par zones colorées.</li>
+                    <li>Un export PDF avec choix du nom et du dossier.</li>
+                    <li>Des capsules audio à enregistrer, écouter et déplacer sur le document.</li>
+                </ul>
+                <p>Les capsules sont conservées dans les projets <code>.adapdf</code>. L’export PDF ne contient pas l’audio.</p>
+            </section>
+            <button class="top" data-top>Retour en haut ↑</button>
+        </main>
+        <footer>
+            <div class="wrap footer">
+                <span>PAON · Pédagogie Accessible, Outils Numériques</span>
+                <a href="mailto:francois.defaye@ac-limoges.fr">Contact</a>
+            </div>
+        </footer>
+    </body>
+</html>
