@@ -25,7 +25,7 @@
 .app-name-tada { color: #2f64e9; }
 .app-name-geomada { color: #187647; }
 .app-name-padaf { display: inline-block; color: #fff; background: #183f3a; padding: .05em .3em; border-radius: .15em; }
-.app-name-padaf .app-prefix { color: #7dd3c7; }
+.app-name-padaf-middle { color: #86efac; }
 .app-title { display: flex; align-items: center; gap: 18px; }
 .app-title img { width: 64px; height: 64px; flex: 0 0 64px; }
 .app-preview { margin: 0; }
