@@ -35,6 +35,7 @@ function assetIsPortable(filename) {
 
 function assetVariant(filename) {
     const name = filename.toLowerCase();
+    if (/^adavocal[-_].*[-_]leger[-_]/.test(name)) return 'leger';
     if (name.includes('tablette') || name.includes('tablet')) return 'tablette';
     if (name.includes('telephone') || name.includes('téléphone') || name.includes('phone')) return 'telephone';
     return 'standard';
@@ -64,6 +65,8 @@ function assetDescription(asset) {
     } else if (name.endsWith('.zip')) {
         platform = 'Archive ZIP';
     }
+    if (assetVariant(name) === 'leger') platform += ' léger · voix Windows';
+    if (/^adavocal[-_].*setup\.exe$/.test(name) && assetVariant(name) !== 'leger') platform += ' avec Siwis';
     const size = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 }).format(asset.size / 1048576);
     return `${platform} · ${size} Mio`;
 }
