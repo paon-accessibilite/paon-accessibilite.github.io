@@ -5,6 +5,7 @@ const applicationNames = {
     mathgiciens: /^mathgiciens[-_]/i,
     tada: /^tada[-_]/i,
     adapdf: /^adapdf[-_]/i,
+    adavocal: /^adavocal[-_]/i,
     geomada: /^g[eé]omada[-_]/i,
     'ordi-academie': /^ordi-academie[-_]/i,
     clavier: /^clavier[-_]/i,
