@@ -65,6 +65,7 @@ function assetDescription(asset) {
     } else if (name.endsWith('.zip')) {
         platform = 'Archive ZIP';
     }
+    if (/^adavocal[-_].*[-_]test[0-9]+_.*\.deb$/.test(name)) platform += ' · version d’essai';
     if (assetVariant(name) === 'leger') platform += ' léger · voix Windows';
     if (/^adavocal[-_].*setup\.exe$/.test(name) && assetVariant(name) !== 'leger') platform += ' avec Siwis';
     const size = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 }).format(asset.size / 1048576);
@@ -152,7 +153,8 @@ async function loadDownloads(section) {
         const releases = await response.json();
         const matcher = applicationNames[section.dataset.downloadApp];
         const available = releases
-            .filter(release => !release.draft && !release.prerelease)
+            .filter(release => !release.draft && (!release.prerelease ||
+                (section.dataset.downloadApp === 'adavocal' && /^adavocal-linux-v[0-9.]+-test[0-9]+$/.test(release.tag_name))))
             .sort((a, b) => new Date(b.published_at) - new Date(a.published_at))
             .map(release => ({ release, assets: release.assets.filter(asset =>
                 matcher.test(asset.name) && /\.(exe|msi|deb|appimage|apk|dmg|zip)$/i.test(asset.name) &&
