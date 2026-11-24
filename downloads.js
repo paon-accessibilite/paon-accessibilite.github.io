@@ -3,6 +3,7 @@ const RELEASES_URL = 'https://api.github.com/repos/frdefaye-blip/paon/releases?p
 const RELEASES_PAGE = 'https://github.com/frdefaye-blip/paon/releases';
 const applicationNames = {
     mathgiciens: /^mathgiciens[-_]/i,
+    'assistant-falc': /^assistant-falc[-_]/i,
     tada: /^tada[-_]/i,
     padaf: /^padaf[-_]/i,
     adavocal: /^adavocal[-_]/i,
@@ -35,7 +36,7 @@ function assetIsPortable(filename) {
 
 function assetVariant(filename) {
     const name = filename.toLowerCase();
-    if (/^adavocal[-_].*[-_]leger[-_]/.test(name)) return 'leger';
+    if (/^(adavocal|assistant-falc)[-_].*[-_]leger[-_]/.test(name)) return 'leger';
     if (name.includes('tablette') || name.includes('tablet')) return 'tablette';
     if (name.includes('telephone') || name.includes('téléphone') || name.includes('phone')) return 'telephone';
     return 'standard';
@@ -66,7 +67,9 @@ function assetDescription(asset) {
         platform = 'Archive ZIP';
     }
     if (/^adavocal[-_].*[-_]test[0-9]+_.*\.deb$/.test(name)) platform += ' · version d’essai';
-    if (assetVariant(name) === 'leger') platform += ' léger · voix Windows';
+    if (assetVariant(name) === 'leger') {
+        platform += name.startsWith('assistant-falc-') ? ' allégé · modèle à télécharger' : ' léger · voix Windows';
+    }
     if (/^adavocal[-_].*setup\.exe$/.test(name) && assetVariant(name) !== 'leger') platform += ' avec Siwis';
     const size = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 }).format(asset.size / 1048576);
     return `${platform} · ${size} Mio`;

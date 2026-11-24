@@ -145,3 +145,5 @@
 
 /* Teinte provisoire pour le jeu Mathgiciens. */
 .card-mathgiciens, .app-page-mathgiciens { background: #eee5f7; }
+
+.card-assistant-falc, .app-page-assistant-falc { --paper: #e7f2ef; background: #e7f2ef; }
