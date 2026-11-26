@@ -9,6 +9,8 @@ Les descriptions restent modifiables directement dans les HTML (indentation : 4 
 4. Donner un titre clair : « TAda 0.6.0 », par exemple.
 5. Ajouter les nouveautés et déposer les installateurs dans la zone des fichiers joints.
 6. Publier la Release. Les boutons apparaîtront automatiquement sur la fiche correspondante.
+7. À chaque publication, actualiser la rubrique « Nouveautés » de la fiche HTML avec le numéro de version et les changements qui concernent les utilisateurs.
+8. Après le déploiement de la fiche, vérifier sur le site public que la rubrique « Nouveautés » et les téléchargements affichent la même version.
 
 Faire une Release par application et par version. Joindre tous les formats de cette version à la même Release.
 La version publiée le plus récemment apparaît en premier, les autres dans « Versions précédentes ».
